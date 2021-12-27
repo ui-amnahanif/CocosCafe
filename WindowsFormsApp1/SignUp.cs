@@ -10,25 +10,23 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Login : Form
+    public partial class SignUp : Form
     {
-        public Login()
+        public SignUp()
         {
             InitializeComponent();
         }
-
-      
 
         private void btnexit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void lblregister_Click(object sender, EventArgs e)
+        private void lbllogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SignUp su = new SignUp();
-            su.Show();
+            Login l = new Login();
+            l.Show();
         }
     }
 }
