@@ -16,5 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void ManagerHome_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello");
+        }
     }
 }
