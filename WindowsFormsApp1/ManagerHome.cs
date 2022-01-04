@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace WindowsFormsApp1
 {
@@ -17,9 +18,27 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void ManagerHome_Load(object sender, EventArgs e)
+     
+
+
+        private void btnlogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello");
+            this.Hide();
+            Login l = new Login();
+            l.Show();
+        }
+
+        private void btnviewstaff_Click(object sender, EventArgs e)
+        {
+            dgvstaff.Rows.Clear();
+            Staff s = new Staff();
+            List<Staff> slist = s.getStaff();
+            foreach(Staff st in slist)
+            {
+                dgvstaff.Rows.Add(st.id, st.username, st.email, st.password, st.role);
+            }
+
+
         }
     }
 }

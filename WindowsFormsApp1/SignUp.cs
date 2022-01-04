@@ -17,16 +17,18 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void btnexit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+     
 
         private void lbllogin_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login l = new Login();
             l.Show();
+        }
+
+        private void btnexit_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
