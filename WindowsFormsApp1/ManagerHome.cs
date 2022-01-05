@@ -69,5 +69,20 @@ namespace WindowsFormsApp1
         {
             welcome.SetPage(5);
         }
+
+        private void btnupdateitems_Click(object sender, EventArgs e)
+        {
+            welcome.SetPage(6);
+        }
+
+        private void btnremoveitems_Click(object sender, EventArgs e)
+        {
+            welcome.SetPage(7);
+        }
+
+        private void btnvieworders_Click(object sender, EventArgs e)
+        {
+            welcome.SetPage(8);
+        }
     }
 }
