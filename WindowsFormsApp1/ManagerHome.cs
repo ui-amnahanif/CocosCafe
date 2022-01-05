@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BusinessLayer;
 namespace WindowsFormsApp1
 {
     public partial class ManagerHome : Form
@@ -20,9 +20,13 @@ namespace WindowsFormsApp1
         private void btnviewstaff_Click(object sender, EventArgs e)
         {
             welcome.SetPage(1);
-            //this.Hide();
-            //ViewStaff vs = new ViewStaff();
-            //vs.Show();
+            dgvaddstaff.Rows.Clear();
+            Staff s = new Staff();
+            List<Staff> slist = s.getStaff();
+            foreach (Staff st in slist)
+            {
+                dgvaddstaff.Rows.Add(st.id, st.username, st.email, st.password, st.role);
+            }
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -32,9 +36,38 @@ namespace WindowsFormsApp1
             l.Show();
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+       
+
+        private void btnaddstaff_Click(object sender, EventArgs e)
         {
-            
+            welcome.SetPage(2);
+        }
+
+        private void lbllogo_Click(object sender, EventArgs e)
+        {
+            welcome.SetPage(0);
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            welcome.SetPage(3);
+            dgvdeletestaff.Rows.Clear();
+            Staff s = new Staff();
+            List<Staff> slist = s.getStaff();
+            foreach (Staff st in slist)
+            {
+                dgvdeletestaff.Rows.Add(st.id, st.username, st.email, st.password, st.role);
+            }
+        }
+
+        private void btnviewitems_Click(object sender, EventArgs e)
+        {
+            welcome.SetPage(4);
+        }
+
+        private void btnadditems_Click(object sender, EventArgs e)
+        {
+            welcome.SetPage(5);
         }
     }
 }
