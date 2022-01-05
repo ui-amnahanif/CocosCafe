@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DataAccessLayer;
 using System.Data.SqlClient;
 
+
 namespace BusinessLayer
 {
    public class UserInfo
@@ -20,63 +21,63 @@ namespace BusinessLayer
 
         DBHandler db = new DBHandler();
 
-        private UserInfo SearchUserbyUserName(string username)
-        {
-            query = "select * from UserInfo where username='" + username + "'";
+        private List<UserInfo> returnUserList() {
+            query = "select * from UserInfo";
             SqlDataReader sdr = db.getReader(query);
-            UserInfo ui = new UserInfo();
-            if (sdr.Read())
+            List<UserInfo> ulist = new List<UserInfo>();
+            UserInfo ui;
+            while (sdr.Read())
             {
+                ui = new UserInfo();
                 ui.id = int.Parse(sdr["id"].ToString());
                 ui.username = sdr["username"].ToString();
                 ui.email = sdr["email"].ToString();
                 ui.password = sdr["password"].ToString();
                 ui.role = sdr["role"].ToString();
-                db.CloseConnection();
-                return ui;
+                ulist.Add(ui);   
             }
-            else
-            {
-                db.CloseConnection();
-                return null;
-            }
-
-
+            db.CloseConnection();
+            return ulist;
         }
 
-        public bool matchcredentials(UserInfo u)
+
+        public bool matchcredentials(UserInfo user)
         {
-            UserInfo ui = SearchUserbyUserName(u.username);
-            if (ui == null)
+            List<UserInfo> ulist = returnUserList();
+            List<UserInfo> ui = (from u in ulist where u.username == user.username && u.password.Equals(user.password) select u).ToList<UserInfo>();
+            bool res=false;
+
+            foreach (UserInfo u in ui)
             {
-                return false;
-            }
-            else
-            {
-                if (ui.username.Equals(u.username) && ui.password.Equals(u.password))
+                if (u != null)
                 {
-                    return true;
+                    res = true;
                 }
                 else
                 {
-                    return false;
+                    res = false;
                 }
             }
-
+            return res;
         }
 
-        public string returnRole(UserInfo ui)
+        public string returnRole(UserInfo user)
         {
-            UserInfo u = SearchUserbyUserName(ui.username);
-            if (u == null)
+            List<UserInfo> ulist = returnUserList();
+            List<UserInfo> ui = (from u in ulist where u.username == user.username select u).ToList<UserInfo>();
+            string role = "";
+            foreach (UserInfo u in ui)
             {
-                return "";
+                if (u != null)
+                {
+                    role = u.role;
+                }
+                else
+                {
+                    role= "";
+                }
             }
-            else
-            {
-                return u.role;
-            }
-           
+            return role;         
         }
 
 
