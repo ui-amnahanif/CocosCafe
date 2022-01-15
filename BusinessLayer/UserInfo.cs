@@ -96,11 +96,17 @@ namespace BusinessLayer
             }
         }
 
+        public void deleteUser(String username)
+        {
+            string query = "delete from userInfo where username='"+username+"'";
+            db.IDU(query); 
+        }
+
         private bool checkvalidity(string email, string password)
         {
             bool res = false;
-            string patternForEmail = "";
-            string patternForPassword = "";
+            string patternForEmail = @"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$";
+            string patternForPassword = @"^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,25}$";
             if (Regex.IsMatch(email, patternForEmail) && Regex.IsMatch(password, patternForPassword))
             {
                 res = true;
@@ -108,10 +114,10 @@ namespace BusinessLayer
             return res;
         }
 
-        public List<UserInfo> getUserbyUsername(string username)
+        public UserInfo getUserbyUsername(string username)
         {
             List<UserInfo> ulist = returnUsersList();
-            List<UserInfo> ui = (from u in ulist where u.username == username select u).ToList<UserInfo>();
+            UserInfo ui = (from u in ulist where u.username == username select u).FirstOrDefault();
             return ui;
         }
 

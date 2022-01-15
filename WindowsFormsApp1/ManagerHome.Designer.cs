@@ -174,7 +174,7 @@ namespace WindowsFormsApp1
             this.rdbtnroleemployee = new System.Windows.Forms.RadioButton();
             this.rdbtnrolemanager = new System.Windows.Forms.RadioButton();
             this.txtstaffemail = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.bunifuButton7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnadduser = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtstaffpassword = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
@@ -1164,7 +1164,7 @@ namespace WindowsFormsApp1
             this.tabPage3.Controls.Add(this.rdbtnroleemployee);
             this.tabPage3.Controls.Add(this.rdbtnrolemanager);
             this.tabPage3.Controls.Add(this.txtstaffemail);
-            this.tabPage3.Controls.Add(this.bunifuButton7);
+            this.tabPage3.Controls.Add(this.btnadduser);
             this.tabPage3.Controls.Add(this.txtstaffpassword);
             this.tabPage3.Location = new System.Drawing.Point(23, 4);
             this.tabPage3.Name = "tabPage3";
@@ -1321,45 +1321,45 @@ namespace WindowsFormsApp1
             this.txtstaffemail.UseSystemPasswordChar = false;
             this.txtstaffemail.WordWrap = true;
             // 
-            // bunifuButton7
+            // btnadduser
             // 
-            this.bunifuButton7.AllowToggling = false;
-            this.bunifuButton7.AnimationSpeed = 200;
-            this.bunifuButton7.AutoGenerateColors = false;
-            this.bunifuButton7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton7.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(24)))));
-            this.bunifuButton7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton7.BackgroundImage")));
-            this.bunifuButton7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton7.ButtonText = "ADD ";
-            this.bunifuButton7.ButtonTextMarginLeft = 0;
-            this.bunifuButton7.ColorContrastOnClick = 45;
-            this.bunifuButton7.ColorContrastOnHover = 45;
-            this.bunifuButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadduser.AllowToggling = false;
+            this.btnadduser.AnimationSpeed = 200;
+            this.btnadduser.AutoGenerateColors = false;
+            this.btnadduser.BackColor = System.Drawing.Color.Transparent;
+            this.btnadduser.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(24)))));
+            this.btnadduser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnadduser.BackgroundImage")));
+            this.btnadduser.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnadduser.ButtonText = "ADD ";
+            this.btnadduser.ButtonTextMarginLeft = 0;
+            this.btnadduser.ColorContrastOnClick = 45;
+            this.btnadduser.ColorContrastOnHover = 45;
+            this.btnadduser.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges10.BottomLeft = true;
             borderEdges10.BottomRight = true;
             borderEdges10.TopLeft = true;
             borderEdges10.TopRight = true;
-            this.bunifuButton7.CustomizableEdges = borderEdges10;
-            this.bunifuButton7.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuButton7.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton7.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton7.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.bunifuButton7.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton7.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton7.IconMarginLeft = 11;
-            this.bunifuButton7.IconPadding = 10;
-            this.bunifuButton7.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton7.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(24)))));
-            this.bunifuButton7.IdleBorderRadius = 30;
-            this.bunifuButton7.IdleBorderThickness = 1;
-            this.bunifuButton7.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(24)))));
-            this.bunifuButton7.IdleIconLeftImage = null;
-            this.bunifuButton7.IdleIconRightImage = null;
-            this.bunifuButton7.IndicateFocus = false;
-            this.bunifuButton7.Location = new System.Drawing.Point(256, 299);
-            this.bunifuButton7.Name = "bunifuButton7";
+            this.btnadduser.CustomizableEdges = borderEdges10;
+            this.btnadduser.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnadduser.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnadduser.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnadduser.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnadduser.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnadduser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnadduser.ForeColor = System.Drawing.Color.White;
+            this.btnadduser.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadduser.IconMarginLeft = 11;
+            this.btnadduser.IconPadding = 10;
+            this.btnadduser.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.btnadduser.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(24)))));
+            this.btnadduser.IdleBorderRadius = 30;
+            this.btnadduser.IdleBorderThickness = 1;
+            this.btnadduser.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(175)))), ((int)(((byte)(24)))));
+            this.btnadduser.IdleIconLeftImage = null;
+            this.btnadduser.IdleIconRightImage = null;
+            this.btnadduser.IndicateFocus = false;
+            this.btnadduser.Location = new System.Drawing.Point(256, 299);
+            this.btnadduser.Name = "btnadduser";
             stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
             stateProperties23.BorderRadius = 30;
             stateProperties23.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -1368,7 +1368,7 @@ namespace WindowsFormsApp1
             stateProperties23.ForeColor = System.Drawing.Color.White;
             stateProperties23.IconLeftImage = null;
             stateProperties23.IconRightImage = null;
-            this.bunifuButton7.onHoverState = stateProperties23;
+            this.btnadduser.onHoverState = stateProperties23;
             stateProperties24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
             stateProperties24.BorderRadius = 30;
             stateProperties24.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -1377,12 +1377,13 @@ namespace WindowsFormsApp1
             stateProperties24.ForeColor = System.Drawing.Color.White;
             stateProperties24.IconLeftImage = null;
             stateProperties24.IconRightImage = null;
-            this.bunifuButton7.OnPressedState = stateProperties24;
-            this.bunifuButton7.Size = new System.Drawing.Size(165, 44);
-            this.bunifuButton7.TabIndex = 27;
-            this.bunifuButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton7.TextMarginLeft = 0;
-            this.bunifuButton7.UseDefaultRadiusAndThickness = true;
+            this.btnadduser.OnPressedState = stateProperties24;
+            this.btnadduser.Size = new System.Drawing.Size(165, 44);
+            this.btnadduser.TabIndex = 27;
+            this.btnadduser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnadduser.TextMarginLeft = 0;
+            this.btnadduser.UseDefaultRadiusAndThickness = true;
+            this.btnadduser.Click += new System.EventHandler(this.btnadduser_Click);
             // 
             // txtstaffpassword
             // 
@@ -1717,6 +1718,7 @@ namespace WindowsFormsApp1
             this.dgvdeletestaff.Size = new System.Drawing.Size(912, 262);
             this.dgvdeletestaff.TabIndex = 10;
             this.dgvdeletestaff.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Crimson;
+            this.dgvdeletestaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdeletestaff_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -3279,7 +3281,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.RadioButton rdbtnroleemployee;
         private System.Windows.Forms.RadioButton rdbtnrolemanager;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtstaffemail;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton7;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnadduser;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtstaffpassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox8;

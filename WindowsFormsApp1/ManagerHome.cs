@@ -40,25 +40,7 @@ namespace WindowsFormsApp1
 
         private void btnaddstaff_Click(object sender, EventArgs e)
         {
-            Staff s = new Staff();
-            s.email = txtstaffemail.Text;
-            s.password = txtstaffpassword.Text;
-            if (rdbtnroleemployee.Checked)
-            {
-                s.role = rdbtnroleemployee.Text;
-            }
-            else
-            {
-                s.role = rdbtnrolemanager.Text;
-            }
-            if (s.addStaff(s))
-            {
-                MessageBox.Show("Staff added successfully");
-            }
-            else
-            {
-                MessageBox.Show("Email must contain . . .\n Password must contain . . .");
-            }
+           
             welcome.SetPage(2);
         }
 
@@ -102,11 +84,50 @@ namespace WindowsFormsApp1
         {
             dgvdeletestaff.Rows.Clear();
             UserInfo u = new UserInfo();
-            List<UserInfo> ulist = u.getUserbyUsername(txtsearchstaffusername.Text);
-            foreach (UserInfo ui in ulist)
+            UserInfo ui = u.getUserbyUsername(txtsearchstaffusername.Text);
+            if (ui!=null)
             {
                 dgvdeletestaff.Rows.Add(ui.id, ui.username, ui.email, ui.password, ui.role);
             }
+            else
+            {
+                MessageBox.Show("This username doesn't exist");
+            }
+
+        }
+
+        private void btnadduser_Click(object sender, EventArgs e)
+        {
+            UserInfo u = new UserInfo();
+            u.email = txtstaffemail.Text;
+            u.password = txtstaffpassword.Text;
+            if (rdbtnroleemployee.Checked)
+            {
+                u.role = rdbtnroleemployee.Text;
+            }
+            else
+            {
+                u.role = rdbtnrolemanager.Text;
+            }
+            if (u.addUser(u))
+            {
+                MessageBox.Show("Staff added successfully");
+            }
+            else
+            {
+                MessageBox.Show("Email must contain . . .\n Password must contain . . .");
+            }
+        }
+
+        private void dgvdeletestaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvdeletestaff.Rows[e.RowIndex];
+            //MessageBox.Show(row.Cells[1].Value.ToString());
+            string username = row.Cells[1].Value.ToString();
+            UserInfo u = new UserInfo();
+            u.deleteUser(username);
+            dgvdeletestaff.Rows.RemoveAt(e.RowIndex);
+
         }
     }
 }
