@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace BusinessLayer
 {
@@ -38,6 +39,40 @@ namespace BusinessLayer
             }
             db.CloseConnection();
             return slist;
+        }
+
+        //public List<Staff> getStaffByUsername()
+        //{
+        //    List<UserInfo> slist = returnUsersList();
+        //    List<UserInfo> ui = (from u in ulist where u.username == user.username && u.password.Equals(user.password) select u).ToList<UserInfo>();
+           
+        //    return slist;
+        //}
+
+        public bool addStaff(Staff s)
+        {
+           if( checkvalidity(s.email, s.password)){
+                string username = s.email.Split('@')[0];
+                String query = "insert into userinfo(username, email, password, role) values('" + username + "', '" + s.email + "', '" + s.password + "', '" + s.role + "')";
+                db.IDU(query);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool checkvalidity(string email, string password)
+        {
+            bool res = false;
+            string patternForEmail = "";
+            string patternForPassword = "";
+            if (Regex.IsMatch(email, patternForEmail) && Regex.IsMatch(password, patternForPassword))
+            {
+                res = true;
+            }
+            return res;
         }
     }
 }

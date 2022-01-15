@@ -40,6 +40,25 @@ namespace WindowsFormsApp1
 
         private void btnaddstaff_Click(object sender, EventArgs e)
         {
+            Staff s = new Staff();
+            s.email = txtstaffemail.Text;
+            s.password = txtstaffpassword.Text;
+            if (rdbtnroleemployee.Checked)
+            {
+                s.role = rdbtnroleemployee.Text;
+            }
+            else
+            {
+                s.role = rdbtnrolemanager.Text;
+            }
+            if (s.addStaff(s))
+            {
+                MessageBox.Show("Staff added successfully");
+            }
+            else
+            {
+                MessageBox.Show("Email must contain . . .\n Password must contain . . .");
+            }
             welcome.SetPage(2);
         }
 
@@ -51,13 +70,7 @@ namespace WindowsFormsApp1
         private void btndelete_Click(object sender, EventArgs e)
         {
             welcome.SetPage(3);
-            dgvdeletestaff.Rows.Clear();
-            Staff s = new Staff();
-            List<Staff> slist = s.getStaff();
-            foreach (Staff st in slist)
-            {
-                dgvdeletestaff.Rows.Add(st.id, st.username, st.email, st.password, st.role);
-            }
+           
         }
 
         private void btnviewitems_Click(object sender, EventArgs e)
@@ -83,6 +96,17 @@ namespace WindowsFormsApp1
         private void btnvieworders_Click(object sender, EventArgs e)
         {
             welcome.SetPage(8);
+        }
+
+        private void btnstaffsearch_Click(object sender, EventArgs e)
+        {
+            dgvdeletestaff.Rows.Clear();
+            UserInfo u = new UserInfo();
+            List<UserInfo> ulist = u.getUserbyUsername(txtsearchstaffusername.Text);
+            foreach (UserInfo ui in ulist)
+            {
+                dgvdeletestaff.Rows.Add(ui.id, ui.username, ui.email, ui.password, ui.role);
+            }
         }
     }
 }

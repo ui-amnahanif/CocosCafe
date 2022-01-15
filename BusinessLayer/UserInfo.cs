@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 
 namespace BusinessLayer
@@ -21,7 +22,7 @@ namespace BusinessLayer
 
         DBHandler db = new DBHandler();
 
-        private List<UserInfo> returnUserList() {
+        private List<UserInfo> returnUsersList() {
             query = "select * from UserInfo";
             SqlDataReader sdr = db.getReader(query);
             List<UserInfo> ulist = new List<UserInfo>();
@@ -43,7 +44,7 @@ namespace BusinessLayer
 
         public bool matchcredentials(UserInfo user)
         {
-            List<UserInfo> ulist = returnUserList();
+            List<UserInfo> ulist = returnUsersList();
             List<UserInfo> ui = (from u in ulist where u.username == user.username && u.password.Equals(user.password) select u).ToList<UserInfo>();
             bool res=false;
 
@@ -63,7 +64,7 @@ namespace BusinessLayer
 
         public string returnRole(UserInfo user)
         {
-            List<UserInfo> ulist = returnUserList();
+            List<UserInfo> ulist = returnUsersList();
             List<UserInfo> ui = (from u in ulist where u.username == user.username select u).ToList<UserInfo>();
             string role = "";
             foreach (UserInfo u in ui)
@@ -80,6 +81,39 @@ namespace BusinessLayer
             return role;         
         }
 
+        public bool addUser(UserInfo u)
+        {
+            if (checkvalidity(u.email, u.password))
+            {
+                string username = u.email.Split('@')[0];
+                String query = "insert into userinfo(username, email, password, role) values('" + username + "', '" + u.email + "', '" + u.password + "', '" + u.role + "')";
+                db.IDU(query);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool checkvalidity(string email, string password)
+        {
+            bool res = false;
+            string patternForEmail = "";
+            string patternForPassword = "";
+            if (Regex.IsMatch(email, patternForEmail) && Regex.IsMatch(password, patternForPassword))
+            {
+                res = true;
+            }
+            return res;
+        }
+
+        public List<UserInfo> getUserbyUsername(string username)
+        {
+            List<UserInfo> ulist = returnUsersList();
+            List<UserInfo> ui = (from u in ulist where u.username == username select u).ToList<UserInfo>();
+            return ui;
+        }
 
     }
 }
