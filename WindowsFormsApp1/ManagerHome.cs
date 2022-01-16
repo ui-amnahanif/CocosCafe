@@ -21,9 +21,9 @@ namespace WindowsFormsApp1
         {
             welcome.SetPage(1);
             dgvaddstaff.Rows.Clear();
-            Staff s = new Staff();
-            List<Staff> slist = s.getStaff();
-            foreach (Staff st in slist)
+            UserInfo u = new UserInfo();
+            List<UserInfo> ulist = u.returnUsersList();
+            foreach (UserInfo st in ulist)
             {
                 dgvaddstaff.Rows.Add(st.id, st.username, st.email, st.password, st.role);
             }
@@ -62,6 +62,10 @@ namespace WindowsFormsApp1
 
         private void btnadditems_Click(object sender, EventArgs e)
         {
+            cmbxadditemcategory.AddItem("Dessert");
+            cmbxadditemcategory.AddItem("Fast Food");
+            cmbxadditemcategory.AddItem("Soup");
+            cmbxadditemcategory.AddItem("Drink");
             welcome.SetPage(5);
         }
 
@@ -128,6 +132,60 @@ namespace WindowsFormsApp1
             u.deleteUser(username);
             dgvdeletestaff.Rows.RemoveAt(e.RowIndex);
 
+        }
+
+        private void btnsearchitemid_Click(object sender, EventArgs e)
+        {
+            dgvdeleteitem.Rows.Clear();
+            Item i = new Item();
+            Item it = i.getItembyId(int.Parse(txtsearchitemid.Text));
+            if (it != null)
+            {
+                dgvdeletestaff.Rows.Add(it.id,it.name,it.category,it.price,it.quantity);
+            }
+            else
+            {
+                MessageBox.Show("This id doesn't exist");
+            }
+        }
+
+        private void btnadditem_Click(object sender, EventArgs e)
+        {
+            Item i = new Item();
+            if (txtadditemname.Text!=null)
+            {
+                i.name = txtadditemname.Text;
+                if (cmbxadditemcategory.selectedValue!=null)
+                {
+                    i.category = cmbxadditemcategory.selectedValue.ToString();
+                    if (txtadditemprice.Text != null)
+                    {
+                        i.price = int.Parse(txtadditemprice.Text);
+                        if (txtadditemqty.Text != null)
+                        {
+                            i.quantity= int.Parse(txtadditemqty.Text);
+                            i.addItem(i);
+                            MessageBox.Show("Added Successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Enter Item Quantity");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter Item Price");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Enter Item Category");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter Item Name");
+            }
         }
     }
 }

@@ -22,7 +22,7 @@ namespace BusinessLayer
 
         DBHandler db = new DBHandler();
 
-        private List<UserInfo> returnUsersList() {
+        public List<UserInfo> returnUsersList() {
             query = "select * from UserInfo";
             SqlDataReader sdr = db.getReader(query);
             List<UserInfo> ulist = new List<UserInfo>();
