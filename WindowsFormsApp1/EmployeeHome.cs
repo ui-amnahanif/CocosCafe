@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
     public partial class EmployeeHome : Form
     {
         string employeeusername = null;
+        int grandtotal = 0;
         public EmployeeHome(string username)
         {
             InitializeComponent();
@@ -111,6 +112,10 @@ namespace WindowsFormsApp1
 
         private void dgvplaceorder_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = dgvplaceorder.Rows[e.RowIndex];
+            //MessageBox.Show(row.Cells[1].Value.ToString());
+            grandtotal-= int.Parse(row.Cells[4].Value.ToString());
+            txtgrandtotal.Text = grandtotal.ToString();
             dgvplaceorder.Rows.RemoveAt(e.RowIndex);
         }
 
@@ -118,7 +123,8 @@ namespace WindowsFormsApp1
 
         private void dgvplaceorder_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            int grandtotal = 0;
+            grandtotal = 0;
+            
             if (e.RowIndex >= 0)
             {
 
@@ -126,11 +132,7 @@ namespace WindowsFormsApp1
                 {
                     DataGridViewRow row = dgvplaceorder.Rows[e.RowIndex];
                     grandtotal += int.Parse(row.Cells[4].Value.ToString());
-                }
-                //foreach (DataGridViewRow row in dgvplaceorder.RowCount)
-                //{
-                //    grandtotal += int.Parse(row.Cells[0].Value.ToString());
-                //}
+                }              
             }
             txtgrandtotal.Enabled = false;
             txtgrandtotal.Text = grandtotal.ToString();
