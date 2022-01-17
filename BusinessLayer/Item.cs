@@ -19,7 +19,7 @@ namespace BusinessLayer
 
         DBHandler db = new DBHandler();
 
-        private List<Item> returnItemsList()
+        public List<Item> returnItemsList()
         {
             query = "select * from Item";
             SqlDataReader sdr = db.getReader(query);
@@ -59,5 +59,21 @@ namespace BusinessLayer
             return itm;
         }
 
+        public bool updateItem(Item i)
+        {
+            Item it = getItembyId(i.id);
+            if (it!=null)
+            {
+                String query = "Update Item set name ='" + i.name + "',category ='" + i.category + "',price= '" + i.price + "',quantity= '" + i.quantity + "'";
+                db.IDU(query);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
+
+        }
     }
 }

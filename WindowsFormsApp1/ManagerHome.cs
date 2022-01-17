@@ -58,6 +58,14 @@ namespace WindowsFormsApp1
         private void btnviewitems_Click(object sender, EventArgs e)
         {
             welcome.SetPage(4);
+            dgvviewitem.Rows.Clear();
+            Item i = new Item();
+            List<Item> ilist = i.returnItemsList();
+            foreach (Item it in ilist)
+            {
+                dgvviewitem.Rows.Add(it.id, it.name, it.category, it.price, it.quantity);
+            }
+            
         }
 
         private void btnadditems_Click(object sender, EventArgs e)
@@ -71,6 +79,10 @@ namespace WindowsFormsApp1
 
         private void btnupdateitems_Click(object sender, EventArgs e)
         {
+            cmbxupdateitemcategory.AddItem("Dessert");
+            cmbxupdateitemcategory.AddItem("Fast Food");
+            cmbxupdateitemcategory.AddItem("Soup");
+            cmbxupdateitemcategory.AddItem("Drink");
             welcome.SetPage(6);
         }
 
@@ -141,7 +153,7 @@ namespace WindowsFormsApp1
             Item it = i.getItembyId(int.Parse(txtsearchitemid.Text));
             if (it != null)
             {
-                dgvdeletestaff.Rows.Add(it.id,it.name,it.category,it.price,it.quantity);
+                dgvdeleteitem.Rows.Add(it.id,it.name,it.category,it.price,it.quantity);
             }
             else
             {
@@ -186,6 +198,71 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Enter Item Name");
             }
+        }
+
+        private void dgvdeleteitem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgvdeleteitem.Rows[e.RowIndex];
+            //MessageBox.Show(row.Cells[1].Value.ToString());
+            string id = row.Cells[0].Value.ToString();
+            Item i = new Item();
+            i.deleteItem(int.Parse(id));
+            dgvdeleteitem.Rows.RemoveAt(e.RowIndex);
+        }
+
+        private void btnupdateitem_Click(object sender, EventArgs e)
+        {
+            Item i = new Item();
+            if(txtupdateitemid.Text != null)
+            {
+                i.id = int.Parse(txtupdateitemid.Text);
+                if (txtupdateitemname.Text != null)
+                {
+                    i.name = txtupdateitemname.Text;
+                    if (cmbxupdateitemcategory.selectedValue != null && cmbxupdateitemcategory.selectedIndex != -1)
+                    {
+                        i.category = cmbxupdateitemcategory.selectedValue.ToString();
+                        if (txtupdateitemprice.Text != null)
+                        {
+                            i.price = int.Parse(txtupdateitemprice.Text);
+                            if (txtupdateitemqty.Text != null)
+                            {
+                                i.quantity = int.Parse(txtupdateitemqty.Text);
+                                if (i.updateItem(i))
+                                {
+                                    MessageBox.Show("Updated Successfully");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("this id doesn't exist");
+                                }
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Enter Item Quantity");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Enter Item Price");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter Item Category");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Enter Item Name");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Enter Item ID");
+            }
+
         }
     }
 }
