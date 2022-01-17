@@ -790,7 +790,7 @@ namespace WindowsFormsApp1
             this.dgvplaceorder.TabIndex = 63;
             this.dgvplaceorder.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Crimson;
             this.dgvplaceorder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvplaceorder_CellContentClick);
-            this.dgvplaceorder.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dgvplaceorder_ColumnAdded);
+            this.dgvplaceorder.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvplaceorder_RowsAdded);
             // 
             // Column1
             // 

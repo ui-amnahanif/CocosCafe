@@ -112,12 +112,28 @@ namespace WindowsFormsApp1
             dgvplaceorder.Rows.RemoveAt(e.RowIndex);
         }
 
-        private void dgvplaceorder_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+     
+
+        private void dgvplaceorder_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            foreach (DataGridView row in dgvplaceorder.Rows)
+            int grandtotal = 0;
+            if (e.RowIndex >= 0)
             {
-                row.CurrentCell.Value.ToString();
+
+                for(int i = 0; i < dgvplaceorder.RowCount; i++)
+                {
+                    DataGridViewRow row = dgvplaceorder.Rows[e.RowIndex];
+                    grandtotal += int.Parse(row.Cells[4].Value.ToString());
+                }
+                //foreach (DataGridViewRow row in dgvplaceorder.RowCount)
+                //{
+                //    grandtotal += int.Parse(row.Cells[0].Value.ToString());
+                //}
             }
+            txtgrandtotal.Enabled = false;
+            txtgrandtotal.Text = grandtotal.ToString();
+
+            //MessageBox.Show(grandtotal.ToString());
         }
     }
 }
