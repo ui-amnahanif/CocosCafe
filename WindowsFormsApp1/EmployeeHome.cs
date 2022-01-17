@@ -23,5 +23,15 @@ namespace WindowsFormsApp1
             Login l = new Login();
             l.Show();
         }
+
+        private void btnemployeehome_Click(object sender, EventArgs e)
+        {
+            employee.SetPage(0);
+        }
+
+        private void btnemployeeplaceorder_Click(object sender, EventArgs e)
+        {
+            employee.SetPage(1);
+        }
     }
 }
