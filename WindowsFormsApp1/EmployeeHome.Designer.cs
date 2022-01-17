@@ -559,6 +559,7 @@ namespace WindowsFormsApp1
             this.btnsearchcategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnsearchcategory.TextMarginLeft = 0;
             this.btnsearchcategory.UseDefaultRadiusAndThickness = true;
+            this.btnsearchcategory.Click += new System.EventHandler(this.btnsearchcategory_Click);
             // 
             // label7
             // 

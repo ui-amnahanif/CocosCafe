@@ -59,6 +59,13 @@ namespace BusinessLayer
             return itm;
         }
 
+        public List<Item> getItembyCategory(string category)
+        {
+            List<Item> ilist = returnItemsList();
+            List<Item> itm = (from i in ilist where i.category == category select i).ToList<Item>();
+            return itm;
+        }
+
         public bool updateItem(Item i)
         {
             Item it = getItembyId(i.id);
