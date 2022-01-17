@@ -73,6 +73,8 @@ namespace WindowsFormsApp1
 
         private void listBoxitems_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtitemqty.Text = " ";
+            txtitemtotal.Text = " ";
             txtitemname.Enabled = false;
             txtitemprice.Enabled = false;
             txtitemid.Enabled = false;
