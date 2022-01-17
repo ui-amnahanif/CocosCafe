@@ -71,7 +71,7 @@ namespace BusinessLayer
             Item it = getItembyId(i.id);
             if (it!=null)
             {
-                String query = "Update Item set name ='" + i.name + "',category ='" + i.category + "',price= '" + i.price + "',quantity= '" + i.quantity + "'";
+                String query = "Update Item set name ='" + i.name + "',category ='" + i.category + "',price= '" + i.price + "',quantity= '" + i.quantity + "' where id='"+i.id+"'";
                 db.IDU(query);
                 return true;
             }

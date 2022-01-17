@@ -70,6 +70,7 @@ namespace WindowsFormsApp1
 
         private void btnadditems_Click(object sender, EventArgs e)
         {
+            cmbxadditemcategory.Clear();
             cmbxadditemcategory.AddItem("Dessert");
             cmbxadditemcategory.AddItem("Fast Food");
             cmbxadditemcategory.AddItem("Soup");
@@ -79,6 +80,7 @@ namespace WindowsFormsApp1
 
         private void btnupdateitems_Click(object sender, EventArgs e)
         {
+            cmbxupdateitemcategory.Clear();
             cmbxupdateitemcategory.AddItem("Dessert");
             cmbxupdateitemcategory.AddItem("Fast Food");
             cmbxupdateitemcategory.AddItem("Soup");
