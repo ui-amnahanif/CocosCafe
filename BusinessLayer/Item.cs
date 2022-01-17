@@ -79,8 +79,14 @@ namespace BusinessLayer
             {
                 return false;
             }
-           
-
         }
+
+        public Item getItemByNameAndCategory(string name, string category)
+        {
+            List<Item> ilist = returnItemsList();
+            Item itm = (from i in ilist where i.name == name && i.category==category select i).FirstOrDefault();
+            return itm;
+        }
+        
     }
 }

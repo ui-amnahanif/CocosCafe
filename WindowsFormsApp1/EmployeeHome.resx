@@ -434,6 +434,24 @@
   <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Black'; font-size: 48pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #EE1D23; text-align: left; }</value>
   </data>
+  <data name="txtitemid.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAAAjCAYAAABiv6+AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALSSURBVGhD7Zs7iBpRFIanEFwV34tvYUGRYCXYBGyCIGwl
+        aQKWsQvphSCCiwQMRBBSREgjC3YprMRUsQypLIUUKymCIQ8mJiQmsZic37nZzRKNbtada3E+OLIzuiP8
+        v2fOPffeUS7IdYqj/f39F16vd2i329/TscZxFtAE2iDo+IjikGKruDwezxOr1TpNJpNqtVrV+v2+NhgM
+        tPF4rDHngSbQBgGtMpmMajKZ5m63+ylpeaBL+p84nc4HdCG10WjMJ5OJ+ErmosxmM63dbmvBYFDFj5uk
+        3dMV3hyXz+d7WS6XZ6qqissylwXG4MdN2r4ijQO61Os5iEQio16v90Nch9kyw+FQC4VCE9I6pUu+GhfM
+        wD8wVwtKQDQafUear64ruE1xZhjHaDRCppyQ9C7dgT+gYdqjWq02E59lDKLT6fz0+/3PhA2nBMiQKYoO
+        YzyxWOwTeXBWTzAUQ/UX7zMG0+12NWq2nws7lD2bzfaZh7dycTgcX8mLxVD4EN2kOM9IolgswpA7CmXH
+        42azKU4zsji9bWGiEHNTjFwwBHY6nW8Ut9t9wo2gfFDDzWbzNwUvXNB3A6ohCEUcMrJhQ3YMNmTHWBiC
+        1SyeMtkNFoZgqIUhFyMXJAWSA7O8Q6z/MnLBWvxi0whlyHGr1RKnGVmgOUeTjqJ+u1AofBHnGUlUKpU5
+        9YT3YYjLYrF8F+cZSZxbE8GkFia3GDlg6gpTWAszBCk4JN5nDCaXyyE7bupWCDhL5LAsO34TiEajr3l7
+        qHFgUjcej78l7a/pFvxNKpFIfODO3Riy2exHajtuCe2XQ41iHqbwXt6rA5kBMwKBwF0h+1pS2OrIHfz2
+        Qc3AbWptZiwBe7WG6XRa5RXFy4PanM/np6KAr6wZm3ADFwmHw9NSqTRH1nCN2QxoVa/XNTxXIx5uKuiS
+        bge4eg9Zs5iV1BdTOP4R0MpsNj+kv/Hk2QYoyi+6RHNvVkFrIgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="txtgrandtotal.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOIAAAAjCAYAAACJpNbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -471,6 +489,9 @@
         L2cGITe3NEabK0l14cw96ZIEEpgn2aiceVTmnT2NDUVRZ6Oy7DcMXRDCyc9bUAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

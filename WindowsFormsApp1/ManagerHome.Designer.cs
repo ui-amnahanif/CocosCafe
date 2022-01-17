@@ -852,7 +852,7 @@ namespace WindowsFormsApp1
             this.btnaddstaff.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnaddstaff.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Disabled;
             this.btnaddstaff.Font = new System.Drawing.Font("Segoe UI Semibold", 14F);
-            this.btnaddstaff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnaddstaff.ForeColor = System.Drawing.Color.White;
             this.btnaddstaff.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnaddstaff.IconMarginLeft = 11;
             this.btnaddstaff.IconPadding = 10;

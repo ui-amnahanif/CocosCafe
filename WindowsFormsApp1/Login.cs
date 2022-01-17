@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     this.Hide();
-                    EmployeeHome eh = new EmployeeHome();
+                    EmployeeHome eh = new EmployeeHome(txtusername.Text);
                     eh.Show();
                 }
             }
