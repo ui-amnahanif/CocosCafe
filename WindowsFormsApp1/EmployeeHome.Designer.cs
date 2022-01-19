@@ -711,6 +711,7 @@ namespace WindowsFormsApp1
             this.btnplaceorder.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnplaceorder.TextMarginLeft = 0;
             this.btnplaceorder.UseDefaultRadiusAndThickness = true;
+            this.btnplaceorder.Click += new System.EventHandler(this.btnplaceorder_Click);
             // 
             // dgvplaceorder
             // 

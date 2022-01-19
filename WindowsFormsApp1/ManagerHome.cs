@@ -96,6 +96,15 @@ namespace WindowsFormsApp1
         private void btnvieworders_Click(object sender, EventArgs e)
         {
             welcome.SetPage(8);
+            dgvvieworder.Rows.Clear();
+            List<Order> olist = new List<Order>();
+            Order o = new Order();
+            olist = o.returnOrderList();
+            foreach (Order oi in olist)
+            {
+                dgvvieworder.Rows.Add(oi.id, oi.employeeid, oi.price, oi.date, oi.time);
+            }
+           
         }
 
         private void btnstaffsearch_Click(object sender, EventArgs e)

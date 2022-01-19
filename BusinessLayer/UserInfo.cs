@@ -120,6 +120,7 @@ namespace BusinessLayer
             UserInfo ui = (from u in ulist where u.username == username select u).FirstOrDefault();
             return ui;
         }
+       
 
     }
 }

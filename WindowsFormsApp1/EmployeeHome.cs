@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class EmployeeHome : Form
     {
         string employeeusername = null;
-        int grandtotal = 0;
+        static int grandtotal = 0;
         public EmployeeHome(string username)
         {
             InitializeComponent();
@@ -74,16 +74,25 @@ namespace WindowsFormsApp1
 
         private void listBoxitems_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
             txtitemqty.Text = " ";
             txtitemtotal.Text = " ";
             txtitemname.Enabled = false;
             txtitemprice.Enabled = false;
             txtitemid.Enabled = false;
             Item i = new Item();
-            i = i.getItemByNameAndCategory(listBoxitems.SelectedItem.ToString(),cmbxitemcategory.selectedValue);
-            txtitemid.Text = i.id.ToString();
-            txtitemname.Text = i.name;
-            txtitemprice.Text = i.price.ToString();
+            if (listBoxitems.SelectedItem.ToString()!=null)
+            {
+                i = i.getItemByNameAndCategory(listBoxitems.SelectedItem.ToString(), cmbxitemcategory.selectedValue);
+                txtitemid.Text = i.id.ToString();
+                txtitemname.Text = i.name;
+                txtitemprice.Text = i.price.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Select Item properly");
+            }
+           
 
            // MessageBox.Show(i.name+i.category+i.id+i.price+i.quantity);
         }
@@ -107,37 +116,58 @@ namespace WindowsFormsApp1
 
         private void btnaddtocart_Click(object sender, EventArgs e)
         {
+           
             dgvplaceorder.Rows.Add(txtitemid.Text,txtitemname.Text,txtitemprice.Text, txtitemqty.Text,txtitemtotal.Text);
+            txtgrandtotal.Enabled = false;
+            grandtotal = grandtotal + int.Parse(txtitemtotal.Text);
+            txtgrandtotal.Text = grandtotal.ToString();
         }
 
         private void dgvplaceorder_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dgvplaceorder.Rows[e.RowIndex];
             //MessageBox.Show(row.Cells[1].Value.ToString());
-            grandtotal-= int.Parse(row.Cells[4].Value.ToString());
+            grandtotal=grandtotal - int.Parse(row.Cells[4].Value.ToString());
             txtgrandtotal.Text = grandtotal.ToString();
             dgvplaceorder.Rows.RemoveAt(e.RowIndex);
         }
 
-     
+
 
         private void dgvplaceorder_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            grandtotal = 0;
-            
-            if (e.RowIndex >= 0)
-            {
+        //    grandtotal = 0;
 
-                for(int i = 0; i < dgvplaceorder.RowCount; i++)
-                {
-                    DataGridViewRow row = dgvplaceorder.Rows[e.RowIndex];
-                    grandtotal += int.Parse(row.Cells[4].Value.ToString());
-                }              
-            }
-            txtgrandtotal.Enabled = false;
-            txtgrandtotal.Text = grandtotal.ToString();
+        //    if (e.RowIndex >= 0)
+        //    {
 
-            //MessageBox.Show(grandtotal.ToString());
+        //        for (int i = 0; i < dgvplaceorder.RowCount; i++)
+        //        {
+        //            DataGridViewRow row = dgvplaceorder.Rows[e.RowIndex];
+        //            grandtotal += int.Parse(row.Cells[4].Value.ToString());
+        //        }
+        //    }
+        //    txtgrandtotal.Enabled = false;
+        //    txtgrandtotal.Text = grandtotal.ToString();
+
+        //    //MessageBox.Show(grandtotal.ToString());
+        }
+
+        private void btnplaceorder_Click(object sender, EventArgs e)
+        {
+            listBoxitems.Items.Clear();
+            txtitemid.Clear();
+            txtitemname.Clear();
+            txtitemprice.Clear();
+            txtitemqty.Clear();
+            txtitemtotal.Clear();
+            dgvplaceorder.Rows.Clear();
+            txtgrandtotal.Clear();
+            Order o = new Order();
+            o.username = employeeusername;
+            o.price = grandtotal;
+            o.insertOrder(o);
+            MessageBox.Show("Order placed successfully");
         }
     }
 }
