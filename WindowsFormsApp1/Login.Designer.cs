@@ -30,17 +30,17 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -50,8 +50,6 @@ namespace WindowsFormsApp1
             this.txtpassword = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.btnlogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnexit = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblregister = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -141,26 +139,26 @@ namespace WindowsFormsApp1
             this.txtusername.Modified = false;
             this.txtusername.Multiline = false;
             this.txtusername.Name = "txtusername";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtusername.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.Empty;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtusername.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtusername.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtusername.OnIdleState = stateProperties4;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtusername.OnActiveState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtusername.OnDisabledState = stateProperties12;
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtusername.OnHoverState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties14.ForeColor = System.Drawing.Color.Empty;
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtusername.OnIdleState = stateProperties14;
             this.txtusername.PasswordChar = '\0';
             this.txtusername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtusername.PlaceholderText = "Enter Username";
@@ -214,27 +212,27 @@ namespace WindowsFormsApp1
             this.txtpassword.Modified = false;
             this.txtpassword.Multiline = false;
             this.txtpassword.Name = "txtpassword";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtpassword.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties6.FillColor = System.Drawing.Color.White;
-            stateProperties6.ForeColor = System.Drawing.Color.Empty;
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtpassword.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtpassword.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtpassword.OnIdleState = stateProperties8;
-            this.txtpassword.PasswordChar = '\0';
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtpassword.OnActiveState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtpassword.OnDisabledState = stateProperties16;
+            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtpassword.OnHoverState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            stateProperties18.ForeColor = System.Drawing.Color.Empty;
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtpassword.OnIdleState = stateProperties18;
+            this.txtpassword.PasswordChar = '●';
             this.txtpassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtpassword.PlaceholderText = "Enter Password";
             this.txtpassword.ReadOnly = false;
@@ -251,7 +249,7 @@ namespace WindowsFormsApp1
             this.txtpassword.TextMarginLeft = 5;
             this.txtpassword.TextMarginTop = 0;
             this.txtpassword.TextPlaceholder = "Enter Password";
-            this.txtpassword.UseSystemPasswordChar = false;
+            this.txtpassword.UseSystemPasswordChar = true;
             this.txtpassword.WordWrap = true;
             // 
             // btnlogin
@@ -268,11 +266,11 @@ namespace WindowsFormsApp1
             this.btnlogin.ColorContrastOnClick = 45;
             this.btnlogin.ColorContrastOnHover = 45;
             this.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnlogin.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnlogin.CustomizableEdges = borderEdges2;
             this.btnlogin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnlogin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnlogin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -293,24 +291,24 @@ namespace WindowsFormsApp1
             this.btnlogin.IndicateFocus = false;
             this.btnlogin.Location = new System.Drawing.Point(242, 272);
             this.btnlogin.Name = "btnlogin";
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
-            stateProperties9.BorderRadius = 30;
-            stateProperties9.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties9.BorderThickness = 1;
-            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
-            stateProperties9.ForeColor = System.Drawing.Color.White;
-            stateProperties9.IconLeftImage = null;
-            stateProperties9.IconRightImage = null;
-            this.btnlogin.onHoverState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
-            stateProperties10.BorderRadius = 30;
-            stateProperties10.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties10.BorderThickness = 1;
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
-            stateProperties10.ForeColor = System.Drawing.Color.White;
-            stateProperties10.IconLeftImage = null;
-            stateProperties10.IconRightImage = null;
-            this.btnlogin.OnPressedState = stateProperties10;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
+            stateProperties19.BorderRadius = 30;
+            stateProperties19.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties19.BorderThickness = 1;
+            stateProperties19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
+            stateProperties19.ForeColor = System.Drawing.Color.White;
+            stateProperties19.IconLeftImage = null;
+            stateProperties19.IconRightImage = null;
+            this.btnlogin.onHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
+            stateProperties20.BorderRadius = 30;
+            stateProperties20.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties20.BorderThickness = 1;
+            stateProperties20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
+            stateProperties20.ForeColor = System.Drawing.Color.White;
+            stateProperties20.IconLeftImage = null;
+            stateProperties20.IconRightImage = null;
+            this.btnlogin.OnPressedState = stateProperties20;
             this.btnlogin.Size = new System.Drawing.Size(161, 36);
             this.btnlogin.TabIndex = 8;
             this.btnlogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -350,37 +348,12 @@ namespace WindowsFormsApp1
             this.btnexit.ZoomSpeed = 10;
             this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(236, 311);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Don\'t have any account? ";
-            // 
-            // lblregister
-            // 
-            this.lblregister.AutoSize = true;
-            this.lblregister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblregister.Font = new System.Drawing.Font("Segoe UI Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblregister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(29)))), ((int)(((byte)(35)))));
-            this.lblregister.Location = new System.Drawing.Point(370, 311);
-            this.lblregister.Name = "lblregister";
-            this.lblregister.Size = new System.Drawing.Size(52, 13);
-            this.lblregister.TabIndex = 11;
-            this.lblregister.Text = "Register";
-            this.lblregister.Click += new System.EventHandler(this.lblregister_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(733, 411);
-            this.Controls.Add(this.lblregister);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtpassword);
@@ -414,7 +387,5 @@ namespace WindowsFormsApp1
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtpassword;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnlogin;
         private Bunifu.UI.WinForms.BunifuImageButton btnexit;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblregister;
     }
 }

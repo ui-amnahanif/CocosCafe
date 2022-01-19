@@ -106,7 +106,7 @@ namespace BusinessLayer
         {
             bool res = false;
             string patternForEmail = @"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$";
-            string patternForPassword = @"^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,25}$";
+            string patternForPassword = @"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,15}$";
             if (Regex.IsMatch(email, patternForEmail) && Regex.IsMatch(password, patternForPassword))
             {
                 res = true;
